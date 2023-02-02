@@ -1,113 +1,148 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    text-decoration: none;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+  text-decoration: none;
 }
 
-body{
-    background: rgb(131,58,180);
-    background: linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 50%, rgba(252,176,69,1) 100%);}
+body {
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
 
-    main{
-        width: 100%;
-        padding: 20px;
-        margin: auto;
-        margin-top: 100px;
-    }
-    .contenedorTodo{
-        width: 100%;
-        max-width: 800px;
-        position: relative;
-        margin: auto;
-    }
-    .caja-trasera{
-        width: 100%;
-        padding: 10px 20px;
-        display: flex;
-        justify-content: center;
-        backdrop-filter: blur(10px);
-        background-color: rgba(247, 154, 158, 0.5);
-    }
+main {
+  width: 100%;
+  padding: 20px;
+  margin: auto;
+  margin-top: 100px;
+}
+.contenedorTodo {
+  width: 100%;
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+.caja-trasera {
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  background-color: rgba(247, 154, 158, 0.5);
+}
 
-    .caja-trasera div{
-        margin: 100px 40px;
-        color: white;
-        transition: all 500ms;
-    }
-    .caja-trasera div p, .caja-trasera div button{
-        margin-top: 30px;
-    }
-    .caja-trasera div h3{
-        font-weight: 600;
-        font-size: 20px;
-    }
-    .caja-trasera div button{
-        padding: 10px 40px;
-        border: 2px solid #fff;
-        background: transparent;
-        font-weight: 600;
-        color: white;
-        cursor: pointer;
-        outline: none;
-        transition: all 300ms;
-    }
-    .caja-trasera div button:hover{
-        background-color: rgb(255, 255, 255);
-        color: rgb(250, 141, 58);
-    }
-    .contenedor-form{
-        display: flex;
-        align-items: center;
-        width: 100%;
-        max-width: 380px;
-        position: relative;
-        top: -185px;
-        left: 10px;
+.caja-trasera div {
+  margin: 100px 40px;
+  color: white;
+  transition: all 500ms;
+}
+.caja-trasera div p,
+.caja-trasera div button {
+  margin-top: 30px;
+}
+.caja-trasera div h3 {
+  font-weight: 600;
+  font-size: 20px;
+}
+.caja-trasera div button {
+  padding: 10px 40px;
+  border: 2px solid #fff;
+  background: transparent;
+  font-weight: 600;
+  color: white;
+  cursor: pointer;
+  outline: none;
+  transition: all 300ms;
+}
+.caja-trasera div button:hover {
+  background-color: rgb(255, 255, 255);
+  color: rgb(250, 141, 58);
+}
+.contenedor-form {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 380px;
+  position: relative;
+  top: -185px;
+  left: 10px;
+transition: left 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+}
 
-    }
+.contenedor-form form {
+  width: 100%;
+  padding: 80px 20px;
+  border-radius: 20px;
+  background-color: white;
+  position: absolute;
+}
+.contenedor-form form h2 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-align: center;
+  color: rgb(247, 154, 159);
+}
+.contenedor-form form input {
+  margin-top: 20px;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  background-color: #f3eded;
+  font-size: 16px;
+  outline: none;
+}
+.contenedor-form form button {
+  margin-top: 40px;
+  padding: 10px 40px;
+  border: none;
+  outline: none;
+  color: white;
+  background: rgb(247, 154, 159);
+  cursor: pointer;
+  font-size: 16px;
+}
+.form-login {
+  display: block;
+  opacity: 1;
+}
 
-    .contenedor-form form {
-        width: 100%;
-        padding: 80px 20px;
-        border-radius: 20px;
-        background-color: white;
-        position: absolute;
-    }
-    .contenedor-form form h2{
-        margin-bottom: 20px;
-        font-weight: 600
-    ;
-    text-align: center;
-    color: rgb(247, 154, 159);
-    }
-    .contenedor-form form input{
-        margin-top: 20px;
-        width: 100%
-        ;padding: 10px;
-        border: none;
-        background-color: #f3eded;
-        font-size: 16px;
-        outline: none;
-    }
-    .contenedor-form form button{
-        margin-top: 40px;
-        padding: 10px 40px;
-        border: none;
-        outline: none;
-        color: white;
-        background: rgb(247, 154, 159);
-        cursor: pointer;
-        font-size: 16px
-        ;
-    }
-    .form-login {
-        display: block;
-        opacity: 1;
-    }
+.form-register {
+  display: none;
+}
 
-    .form-register{
-        display: none;
-    }
+@media screen and (max-width: 850px) {
+  main {
+    margin-top: 50px;
+  }
+  .caja-trasera {
+    max-width: 350px;
+    height: 300px;
+    flex-direction: column;
+    margin: auto;
+  }
+  .caja-trasera div {
+    margin: 0px;
+    position: absolute;
+  };
+
+  .contenedor-form{
     
+ margin: auto;
+ top: -10px;
+ left: -5px;
+ 
+    
+  }
+  .contenedor-form form{
+  
+  position:relative;
+  
+
+  }
+}
